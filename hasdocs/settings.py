@@ -293,6 +293,8 @@ HEROKU_API_KEY = os.environ['HEROKU_API_KEY']
 
 # Celery
 BROKER_URL = 'django://'
+if os.environ.get('CELERY_ALWAYS_EAGER', None) == '1':
+    CELERY_ALWAYS_EAGER = True
 
 import djcelery
 djcelery.setup_loader()
