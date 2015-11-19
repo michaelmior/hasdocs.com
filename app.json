@@ -14,11 +14,21 @@
     "AWS_DOCS_BUCKET_NAME": {},
     "GITHUB_CLIENT_ID": {},
     "GITHUB_CLIENT_SECRET": {},
-    "HEROKU_API_KEY": {},
-    "GS_ACCESS_KEY_ID": {},
-    "GS_SECRET_ACCESS_KEY": {},
-    "GS_BUCKET_NAME": {},
-    "STRIPE_API_KEY": {},
+    "HEROKU_API_KEY": {
+        "required": false
+    },
+    "GS_ACCESS_KEY_ID": {
+        "required": false
+    },
+    "GS_SECRET_ACCESS_KEY": {
+        "required": false
+    },
+    "GS_BUCKET_NAME": {
+        "required": false
+    },
+    "STRIPE_API_KEY": {
+        "required": false
+    },
     "PUSHER_APP_ID": {},
     "PUSHER_APP_KEY": {},
     "PUSHER_API_SECRET": {},
