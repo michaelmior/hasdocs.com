@@ -83,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '2$+dp%u926(lr*e24#$1_daj9f@%jb=zpf*uvihx$wc2yqbc^)'
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -242,6 +242,10 @@ elif os.environ.get('STAGING'):
     SESSION_COOKIE_DOMAIN = '.docsome.com'
 else:
     SESSION_COOKIE_DOMAIN = '.hasdocs.com'
+ALLOWED_HOSTS = os.environ.get('HOSTNAMES', '').split(',')
+SITE_DOMAIN = ALLOWED_HOSTS[0]
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
 
 # User profile
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
